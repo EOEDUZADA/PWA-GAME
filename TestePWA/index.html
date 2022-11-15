@@ -48,6 +48,15 @@
 				
 			
 		</div>
+		<script>
+		 if (navigator.serviceWorker) {
+        navigator.serviceWorker.register (
+          '/PWA-GAME/sw.js',
+          {scope: '/PWA-GAME/'}
+        )
+ }
+			
+		</script>
 		
 		<script src="./js/script.js"></script>
 
