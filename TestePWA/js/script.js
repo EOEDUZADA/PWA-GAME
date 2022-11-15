@@ -4,6 +4,7 @@
           '/PWA-GAME/sw.js',
           {scope: '/PWA-GAME/'}
         )
+ }
 
 
 
