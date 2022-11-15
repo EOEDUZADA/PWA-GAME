@@ -1,10 +1,4 @@
 
- if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/PWA-GAME/sw.js',
-          {scope: '/PWA-GAME/'}
-        )
- }
 
 
 
