@@ -1,8 +1,8 @@
 {
   "name": "Jumper",
-  "short_name": "Jumper",
+  "short_name": "",
   "theme_color": "#000000",
-  "background_color": "#022947",
+  "background_color": "#2D283E",
   "display": "fullScreen",
   "orientation": "portrait",
   "scope": "./",
