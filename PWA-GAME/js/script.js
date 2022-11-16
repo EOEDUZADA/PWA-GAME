@@ -276,7 +276,7 @@ function recordes() {
 
     }
 
-    RECORDE.innerHTML = "BEST: " + MAIORPONTUACAO[0] + "          " + MAIORPONTUACAO[1] + "          " + MAIORPONTUACAO[2];
+    RECORDE.innerHTML = "BEST: " + MAIORPONTUACAO[0] + "             " + MAIORPONTUACAO[1] + "             " + MAIORPONTUACAO[2];
 
 }
 
