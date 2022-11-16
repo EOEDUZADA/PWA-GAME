@@ -52,7 +52,7 @@ function iniciar() {
 
     JAFOICLICADO = true;
 
-    FUNDO.style.backgroundImage = "url('./icon/ground2.jpg')";
+    FUNDO.style.backgroundImage = "url('./icon/fundoroxo.jpg')";
 
     DIVPONTOS.style.display = "none"
 
