@@ -1,0 +1,43 @@
+<!DOCTYPE html public>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumper</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" crossorigin="use-credentials" href="./manifest.json" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,500&display=swap" rel="stylesheet"> 
+    <script defer src="./js/script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js').then(function() {
+          console.log('service worker registered');
+        }).catch(function() {
+          console.log('service worker failed');
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="nome">
+      <h1>JUMPER 2000</h1>
+    </div>
+    <div class="fundo" id="fundo" onclick="clicarBotao()">
+      <span class="score">0</span>
+      <div id="div2"></div>
+      <div id="div1"></div>
+      <div class="cactus"></div>
+      <div class="iniciar" onclick="iniciar()">INICIAR</div>
+      <div class="reiniciar" onclick="reiniciar()">REINICIAR</div>
+      <div class="mostrarPontos"></div>
+      <div id="chao"></div>
+      <div class="recorde" onclick="recordes()"></div>
+    </div>
+  </body>
+</html>
