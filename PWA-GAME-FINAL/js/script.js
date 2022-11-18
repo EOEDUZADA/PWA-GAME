@@ -139,7 +139,7 @@ function acima() {
 
 function baixo() {
     let DIV1TOP = parseInt(getComputedStyle(div1).top);
-    let FUNDOHEIGHT = parseInt(getComputedStyle(chao).height) - 10;
+    let FUNDOHEIGHT = parseInt(getComputedStyle(chao).height) - 15;
     let DIV1HEIGHT = parseInt(getComputedStyle(div1).height);
 
     if (largura > 600) {
