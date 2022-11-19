@@ -8,6 +8,7 @@ console.log(altura);
 console.log(largura);
 
 let TIMER = "";
+let VELOCIDADE = 0;
 let PONTOS = 0;
 let SCORE = document.querySelector(".score");
 let CONTAR = 0;
@@ -22,9 +23,9 @@ div2.style.animationPlayState = "paused";
 
 SCORE.style.display = "none";
 
-let speed2 = "1s";
-let speed3 = "0.8s";
-let speed4 = "0.95s";
+let speed2 = "1s"
+let speed3 = "0.8s"
+let speed4 = "0.95s"
 
 if (largura < 500 && largura > 400) {
 
@@ -40,7 +41,8 @@ if (largura < 400 && largura > 320) {
 
 if (largura > 600) {
 
-    div2.style.animationDuration = speed4;
+    console.log("bah")
+    div2.style.animationDuration = speed4
 
 }
 // mover cursor 2 - automático
@@ -52,7 +54,7 @@ function iniciar() {
 
     FUNDO.style.backgroundImage = "url('./icon/fundoroxo.jpg')";
 
-    DIVPONTOS.style.display = "none";
+    DIVPONTOS.style.display = "none"
 
     div2.style.animationPlayState = "running";
 
@@ -65,7 +67,7 @@ function iniciar() {
 
     CONTARPONTOS();
 
-    PARARLOCALSTORAGE = false;
+    PARARLOCALSTORAGE = false
 
     SCORE.style.display = "block";
     BOTAOINICIAR.style.display = "none";
@@ -92,6 +94,7 @@ function move(Direcao) {
 
         CONTADOR++;
 
+        SCORE++;
 
     }
 
@@ -188,6 +191,7 @@ function colisao() {
         para();
         clicarBotao();
         INICIO = true;
+        VELOCIDADE = 0;
         pontuacaoStorage();
         pontosarmazenados2 = true
         botaoreiniciar();
@@ -196,7 +200,7 @@ function colisao() {
         recordes();
         MUSICADEFUNDO.pause();
         MUSICADEFUNDO.currentTime = 0;
-        chao.style.top = 60 + "%";
+        chao.style.top = 60 + "%"
 
     }
     if (((DIV2LEFT >= DIV1LEFT) && (DIV2LEFT <= DIV1LEFT + DIV1WIDTH)) &&
@@ -205,6 +209,7 @@ function colisao() {
         para();
         clicarBotao();
         INICIO = true;
+        VELOCIDADE = 0;
         DIVPONTOS.style.display = "block"
         mostrarPontos();
         pontuacaoStorage();
@@ -266,7 +271,7 @@ function pontuacaoStorage() {
 
 function recordes() {
 
-    RECORDE.style.display = "block";
+    RECORDE.style.display = "block"
 
     if (MAIORPONTUACAO[1] == undefined && MAIORPONTUACAO[2] == undefined) {
 
@@ -286,9 +291,9 @@ function recordes() {
 function botaoreiniciar() {
 
     GAMEOVER.play();
-    div1.style.display = "none";
+    div1.style.display = "none"
 
-    div2.style.display = "none";
+    div2.style.display = "none"
 
     INICIO = false;
 
@@ -301,12 +306,13 @@ function reiniciar() {
     JAFOICLICADO = false;
 
     div1.style.top = 50 + "%";
-    div1.style.display = "block";
+    div1.style.display = "block"
     REINICIO.style.display = "none";
 
-    div2.style.display = "block";
+    div2.style.display = "block"
 
     CONTAR = 0;
+    VELOCIDADE = 0;
 
     clearInterval(M)
     clearInterval(TIMER)
@@ -331,6 +337,16 @@ var JAFOICLICADO = false;
 function clicarBotao() {
     if (!JAFOICLICADO) {
 
+        if (CONTAR > 100) {
+
+            console.log("Oii");
+
+            if (CONTAR > 120) {
+
+                console.log("bahh")
+            }
+        }
+
         move(acima);
 
         SOMPULO.play();
@@ -344,7 +360,7 @@ function clicarBotao() {
 //Ao carregar a página estas linhas são executadas. 
 let CONTADOR = 0;
 let cont = 0;
-var M = "" ; //Funções que são chamadas a cada 15 e 5 milisegundos
+var M = "" //Funções que são chamadas a cada 15 e 5 milisegundos
 let n = setInterval("colisao()", 5);
 let contadorpulo = 0;
 
@@ -356,4 +372,3 @@ MUSICADEFUNDO.src = 'musicafundo.wav';
 
 var GAMEOVER = new Audio();
 GAMEOVER.src = 'gameover.wav';
-
